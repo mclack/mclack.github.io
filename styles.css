@@ -2,8 +2,12 @@
 	box-sizing: border-box;
 }
 
+body {
+	background-color: #E9F1F5;
+}
 nav {
 	position: fixed;
+	top: 0;
 	background-color: #000000;
 	display: flex;
 	justify-content: space-around;
@@ -19,4 +23,66 @@ nav a {
 	padding: 2px;
 	border-radius: 10px;
 	font-family: Copperplate;
+}
+
+main {
+	margin-top: 60px;
+	display: flex;
+	flex-wrap: wrap;
+	border: 2px solid #000000;
+	width: 900px;
+	margin: 60px auto;
+}
+
+.about-title {
+	width: 30%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: linear-gradient(#F6D621, #21ACF6);
+}
+.about-story {
+	width: 70%;
+	background-color: #21ACF6;
+	background: linear-gradient(#F6D621, #21ACF6);
+	padding: 10px;
+}
+.about-interests {
+	width: 55%;
+	background: linear-gradient(#21ACF6, #F6D621);
+	padding: 10px;
+}
+.about-aspirations {
+	width: 45%;
+	background: linear-gradient(#21ACF6, #F6D621);
+	padding: 10px;
+}
+
+h1, h2 {
+	font-family: Papyrus;
+}
+
+p {
+	font-family: Monaco;
+}
+
+@media screen and (max-width: 950px) {
+	main {
+		flex-direction: column;
+		width: 500px;
+	}
+	.about-title {
+		width: 100%;
+	}
+	.about-story {
+		background: linear-gradient(#21ACF6, #F6D621);
+		width: 100%;
+	}
+	.about-interests {
+		background: linear-gradient(#F6D621, #21ACF6);
+		width: 100%;
+	}
+	.about-aspirations {
+		width: 100%;
+	}
 }
