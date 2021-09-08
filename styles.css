@@ -15,10 +15,20 @@ nav {
 	height: 40px;
 }
 
-nav a {
+.button-one {
 	color: #000000;
 	background-color: #F6D621;
 	border: 3px solid #21ACF6;
+	margin: 4px;
+	padding: 2px;
+	border-radius: 10px;
+	font-family: Copperplate;
+}
+
+.button-two {
+	color: #000000;
+	background-color: #21ACF6;
+	border: 3px solid #F6D621;
 	margin: 4px;
 	padding: 2px;
 	border-radius: 10px;
@@ -83,16 +93,6 @@ summary {
 	border: 2px solid #000000;
 }
 
-.project-link {
-	color: #000000;
-	background-color: #21ACF6;
-	border: 3px solid #F6D621;
-	margin: 4px;
-	padding: 2px;
-	border-radius: 10px;
-	font-family: Copperplate;
-}
-
 img {
 	width: 250px;
 	height: 200px;
@@ -113,6 +113,38 @@ img {
 
 .project-details p {
 	padding-left: 10px;
+}
+
+footer {
+	background-color: #000000;
+	height: 100%;
+	width: 100%;
+	margin-top: 100px;
+	padding: 1px;
+	color: #FFFFFF;
+	border: 2px solid;
+	display: flex;
+	justify-content: center;
+}
+
+footer h2 {
+	width: 130px;
+}
+
+.social-links {
+	margin-right: 70px;
+	margin-left: 20px;
+	margin-bottom: 10px;
+}
+
+.fab {
+	background-color: #3B5998;
+	color: #FFFFFF;
+	height: 28px;
+	width: 28px;
+	border-radius: 5px;
+	padding-left: 7px;
+	padding-top: 5px;
 }
 
 @media screen and (max-width: 950px) {
@@ -136,18 +168,18 @@ img {
 		flex-direction: column;
 		width: 500px;
 	}
-	
 	#portfolio {
 		text-align: center;
 	}
-	
 	.project {
 		flex-wrap: wrap;
 		justify-content: center;
 	}
-	
 	.project p {
 		width: 100%;
 	}
-
+	
+	footer {
+		align-items: center;
+	}
 }
