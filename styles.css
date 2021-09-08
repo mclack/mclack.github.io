@@ -3,7 +3,8 @@
 }
 
 body {
-	background-color: #E9F1F5;
+	/*background-color: #E9F1F5;*/
+	background-image: url('https://www.patternpictures.com/wp-content/uploads/Timber-wood-wall-nails-background-stock-photo-PatternPictures-0314-360x265.jpg');
 }
 nav {
 	position: fixed;
@@ -60,10 +61,69 @@ main {
 
 h1, h2 {
 	font-family: Papyrus;
+	
+}
+
+h1 {
+	text-decoration: underline;
+}
+
+summary h2 {
+	text-decoration: underline;
 }
 
 p {
 	font-family: Monaco;
+}
+
+summary {
+	width: 900px;
+	margin: 0 auto;
+	padding: 2px;
+	background-color: #21ACF6;
+	border: 2px solid #000000;
+}
+
+.portfolio-title {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+.project-title {
+	width: 30%;
+}
+
+.live-project, .git-project {
+	color: #000000;
+	background-color: #21ACF6;
+	border: 3px solid #F6D621;
+	margin: 4px;
+	padding: 2px;
+	border-radius: 10px;
+	font-family: Copperplate;
+}
+
+img {
+	width: 250px;
+	height: 200px;
+}
+
+.links {
+	display: flex;
+	justify-content: space-between;
+}
+
+#portfolio h1 {
+	text-align: center;
+}
+
+.project {
+	display: flex;
+}
+
+.project-details p {
+	padding-left: 10px;
 }
 
 @media screen and (max-width: 950px) {
@@ -71,7 +131,7 @@ p {
 		flex-direction: column;
 		width: 500px;
 	}
-	.about-title {
+	.about-title, .about-aspirations {
 		width: 100%;
 	}
 	.about-story {
@@ -82,7 +142,23 @@ p {
 		background: linear-gradient(#F6D621, #21ACF6);
 		width: 100%;
 	}
-	.about-aspirations {
+	
+	summary {
+		flex-direction: column;
+		width: 500px;
+	}
+	
+	#portfolio {
+		text-align: center;
+	}
+	
+	.project {
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+	
+	.project p {
 		width: 100%;
 	}
+
 }
