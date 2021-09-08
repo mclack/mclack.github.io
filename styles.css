@@ -124,7 +124,6 @@ footer {
 	color: #FFFFFF;
 	border: 2px solid;
 	display: flex;
-	justify-content: center;
 }
 
 footer h2 {
@@ -132,9 +131,7 @@ footer h2 {
 }
 
 .social-links {
-	margin-right: 70px;
-	margin-left: 20px;
-	margin-bottom: 10px;
+	margin: 0 70px 10px 20px;
 }
 
 .fab {
@@ -143,8 +140,7 @@ footer h2 {
 	height: 28px;
 	width: 28px;
 	border-radius: 5px;
-	padding-left: 7px;
-	padding-top: 5px;
+	padding: 5px 0 0 7px;
 }
 
 @media screen and (max-width: 950px) {
@@ -177,9 +173,5 @@ footer h2 {
 	}
 	.project p {
 		width: 100%;
-	}
-	
-	footer {
-		align-items: center;
 	}
 }
