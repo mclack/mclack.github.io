@@ -25,6 +25,10 @@ nav {
 	font-family: Copperplate;
 }
 
+.button-one:hover {
+	background-color: #21ACF6;
+}
+
 .button-two {
 	color: #000000;
 	background-color: #21ACF6;
@@ -33,6 +37,10 @@ nav {
 	padding: 2px;
 	border-radius: 10px;
 	font-family: Copperplate;
+}
+
+.button-two:hover {
+	background-color: #F6D621;
 }
 
 main {
@@ -93,6 +101,10 @@ summary {
 	border: 2px solid #000000;
 }
 
+#portfolio h1 {
+	text-align: center;
+}
+
 img {
 	width: 250px;
 	height: 200px;
@@ -103,16 +115,12 @@ img {
 	justify-content: space-between;
 }
 
-#portfolio h1 {
-	text-align: center;
-}
-
 .project {
 	display: flex;
 }
 
-.project-details p {
-	padding-left: 10px;
+summary p {
+	margin-left: 30px;
 }
 
 footer {
@@ -141,6 +149,11 @@ footer h2 {
 	width: 28px;
 	border-radius: 5px;
 	padding: 5px 0 0 7px;
+}
+
+.fab:hover {
+	border: 2px solid #ED2116;
+	padding: 3px 0 0 5px;
 }
 
 @media screen and (max-width: 950px) {
@@ -172,6 +185,6 @@ footer h2 {
 		justify-content: center;
 	}
 	.project p {
-		width: 100%;
+		margin: 10px 2px 2px 2px;
 	}
 }
