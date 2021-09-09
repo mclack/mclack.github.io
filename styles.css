@@ -1,0 +1,212 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background-image: url('https://www.patternpictures.com/wp-content/uploads/Timber-wood-wall-nails-background-stock-photo-PatternPictures-0314-360x265.jpg');
+}
+
+/* NAVBAR */
+nav {
+	position: fixed;
+	top: 0;
+	background-color: #000000;
+	display: flex;
+	justify-content: space-around;
+	width: 100%;
+	height: 40px;
+}
+
+/* <a> TAG DESIGN */
+.nav-button {
+	color: #000000;
+	background-color: #F6D621;
+	border: 3px solid #21ACF6;
+	margin: 4px;
+	padding: 2px;
+	border-radius: 10px;
+	font-family: Copperplate;
+}
+.nav-button:hover {
+	background-color: #21ACF6;
+}
+.project-button {
+	color: #000000;
+	background-color: #21ACF6;
+	border: 3px solid #F6D621;
+	margin: 4px;
+	padding: 2px;
+	border-radius: 10px;
+	font-family: Copperplate;
+}
+.project-button:hover {
+	background-color: #F6D621;
+}
+
+/* GENERAL TEXT STYLISATION */
+h1, h2 {
+	font-family: Papyrus;
+}
+h1 {
+	text-decoration: underline;
+}
+p {
+	font-family: Monaco;
+}
+
+
+/* "WELCOME!" TITLE */
+header {
+	text-align: center;
+}
+header h1 {
+	padding: 6px 2px;
+	background-color: #F6D621;
+	border-radius: 6px;
+	width: 190px;
+	border-right: 4px solid #21ACF6;
+	overflow: hidden;
+	margin: 0 auto;
+	margin-top: 50px;
+	animation: 
+	typing 2s steps(40, end),
+	blink-caret 1s step-end infinite;
+}
+
+/* TYPING EFFECT */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 200px }
+}
+
+/* TYPEWRITER CURSOR EFFECT */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #21ACF6; }
+}
+
+/* ABOUT ME SECTION */
+main {
+	display: flex;
+	flex-wrap: wrap;
+	border: 2px solid #000000;
+	width: 900px;
+	margin: 20px auto;
+}
+.about-title {
+	width: 30%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: linear-gradient(#F6D621, #21ACF6);
+}
+.about-story {
+	width: 70%;
+	background-color: #21ACF6;
+	background: linear-gradient(#F6D621, #21ACF6);
+	padding: 10px;
+}
+.about-interests {
+	width: 55%;
+	background: linear-gradient(#21ACF6, #F6D621);
+	padding: 10px;
+}
+.about-aspirations {
+	width: 45%;
+	background: linear-gradient(#21ACF6, #F6D621);
+	padding: 10px;
+}
+
+/* PORTFOLIO SECTION */
+summary h2 {
+	text-decoration: underline;
+}
+summary {
+	width: 900px;
+	margin: 0 auto;
+	padding: 2px;
+	background-color: #21ACF6;
+	border: 2px solid #000000;
+}
+#portfolio h1 {
+	text-align: center;
+}
+img {
+	width: 250px;
+	height: 200px;
+}
+.links {
+	display: flex;
+	justify-content: space-between;
+}
+.project {
+	display: flex;
+}
+
+summary p {
+	margin-left: 15px;
+}
+
+/* FOOTER/CONTACT SECTION */
+footer {
+	background-color: #000000;
+	margin-top: 60px;
+	padding: 1px;
+	color: #FFFFFF;
+	border: 2px solid;
+	display: flex;
+}
+footer h2 {
+	width: 130px;
+}
+.footer-content {
+	margin: 2%;
+}
+
+/* SOCIAL MEDIA ICONS */
+.fab {
+	background-color: #3B5998;
+	color: #FFFFFF;
+	height: 28px;
+	width: 28px;
+	border-radius: 5px;
+	padding: 5px 0 0 7px;
+}
+.fab:hover {
+	border: 2px solid #ED2116;
+	padding: 3px 0 0 5px;
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 950px) {
+	main {
+		flex-direction: column;
+		width: 500px;
+	}
+	.about-title, .about-aspirations {
+		width: 100%;
+	}
+	.about-story {
+		background: linear-gradient(#21ACF6, #F6D621);
+		width: 100%;
+	}
+	.about-interests {
+		background: linear-gradient(#F6D621, #21ACF6);
+		width: 100%;
+	}
+	
+	summary {
+		flex-direction: column;
+		width: 500px;
+	}
+	#portfolio {
+		text-align: center;
+	}
+	.project {
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+	.project p {
+		margin: 10px 2px 2px 2px;
+	}
+}
