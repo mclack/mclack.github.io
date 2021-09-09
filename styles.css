@@ -18,7 +18,7 @@ nav {
 }
 
 /* <a> TAG DESIGN */
-.button-one {
+.nav-button {
 	color: #000000;
 	background-color: #F6D621;
 	border: 3px solid #21ACF6;
@@ -27,10 +27,10 @@ nav {
 	border-radius: 10px;
 	font-family: Copperplate;
 }
-.button-one:hover {
+.nav-button:hover {
 	background-color: #21ACF6;
 }
-.button-two {
+.project-button {
 	color: #000000;
 	background-color: #21ACF6;
 	border: 3px solid #F6D621;
@@ -39,7 +39,7 @@ nav {
 	border-radius: 10px;
 	font-family: Copperplate;
 }
-.button-two:hover {
+.project-button:hover {
 	background-color: #F6D621;
 }
 
@@ -159,12 +159,10 @@ footer {
 footer h2 {
 	width: 130px;
 }
-.social-links {
+.footer-content {
 	margin: 2%;
 }
-.footer-text {
-	margin: 2%;
-}
+
 /* SOCIAL MEDIA ICONS */
 .fab {
 	background-color: #3B5998;
@@ -174,7 +172,6 @@ footer h2 {
 	border-radius: 5px;
 	padding: 5px 0 0 7px;
 }
-
 .fab:hover {
 	border: 2px solid #ED2116;
 	padding: 3px 0 0 5px;
