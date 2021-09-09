@@ -5,6 +5,8 @@
 body {
 	background-image: url('https://www.patternpictures.com/wp-content/uploads/Timber-wood-wall-nails-background-stock-photo-PatternPictures-0314-360x265.jpg');
 }
+
+/* NAVBAR */
 nav {
 	position: fixed;
 	top: 0;
@@ -15,6 +17,7 @@ nav {
 	height: 40px;
 }
 
+/* <a> TAG DESIGN */
 .button-one {
 	color: #000000;
 	background-color: #F6D621;
@@ -24,11 +27,9 @@ nav {
 	border-radius: 10px;
 	font-family: Copperplate;
 }
-
 .button-one:hover {
 	background-color: #21ACF6;
 }
-
 .button-two {
 	color: #000000;
 	background-color: #21ACF6;
@@ -38,20 +39,60 @@ nav {
 	border-radius: 10px;
 	font-family: Copperplate;
 }
-
 .button-two:hover {
 	background-color: #F6D621;
 }
 
+/* GENERAL TEXT STYLISATION */
+h1, h2 {
+	font-family: Papyrus;
+}
+h1 {
+	text-decoration: underline;
+}
+p {
+	font-family: Monaco;
+}
+
+
+/* "WELCOME!" TITLE */
+header {
+	text-align: center;
+}
+header h1 {
+	padding: 6px 2px;
+	background-color: #F6D621;
+	border-radius: 6px;
+	width: 190px;
+	border-right: 4px solid #21ACF6;
+	overflow: hidden;
+	margin: 0 auto;
+	margin-top: 50px;
+	animation: 
+	typing 2s steps(40, end),
+	blink-caret 1s step-end infinite;
+}
+
+/* TYPING EFFECT */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 200px }
+}
+
+/* TYPEWRITER CURSOR EFFECT */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #21ACF6; }
+}
+
+/* ABOUT ME SECTION */
 main {
-	margin-top: 60px;
 	display: flex;
 	flex-wrap: wrap;
 	border: 2px solid #000000;
 	width: 900px;
-	margin: 60px auto;
+	margin: 20px auto;
 }
-
 .about-title {
 	width: 30%;
 	display: flex;
@@ -76,23 +117,10 @@ main {
 	padding: 10px;
 }
 
-h1, h2 {
-	font-family: Papyrus;
-	
-}
-
-h1 {
-	text-decoration: underline;
-}
-
+/* PORTFOLIO SECTION */
 summary h2 {
 	text-decoration: underline;
 }
-
-p {
-	font-family: Monaco;
-}
-
 summary {
 	width: 900px;
 	margin: 0 auto;
@@ -100,48 +128,43 @@ summary {
 	background-color: #21ACF6;
 	border: 2px solid #000000;
 }
-
 #portfolio h1 {
 	text-align: center;
 }
-
 img {
 	width: 250px;
 	height: 200px;
 }
-
 .links {
 	display: flex;
 	justify-content: space-between;
 }
-
 .project {
 	display: flex;
 }
-
 summary p {
 	margin-left: 30px;
 }
 
+/* FOOTER/CONTACT SECTION */
 footer {
 	background-color: #000000;
-	height: 100%;
-	width: 100%;
-	margin-top: 100px;
+	margin-top: 60px;
 	padding: 1px;
 	color: #FFFFFF;
 	border: 2px solid;
 	display: flex;
 }
-
 footer h2 {
 	width: 130px;
 }
-
 .social-links {
-	margin: 0 70px 10px 20px;
+	margin: 2%;
 }
-
+.footer-text {
+	margin: 2%;
+}
+/* SOCIAL MEDIA ICONS */
 .fab {
 	background-color: #3B5998;
 	color: #FFFFFF;
@@ -156,6 +179,7 @@ footer h2 {
 	padding: 3px 0 0 5px;
 }
 
+/* MEDIA QUERIES */
 @media screen and (max-width: 950px) {
 	main {
 		flex-direction: column;
