@@ -1,9 +1,15 @@
+$primary-color: #F1FFFE;
+$secondary-color: #05668D;
+$title-font: Papyrus;
+$button-font: Copperplate;
+$p-font: Monaco;
+
 * {
   box-sizing: border-box;
 }
 
 body {
-  background-color: #F1FFFE;
+  background-color: $primary-color;
 }
 
 /* NAVBAR */
@@ -20,69 +26,70 @@ nav {
 /* <a> TAG DESIGN */
 .nav-button {
   color: #000000;
-  background-color: #F1FFFE;
-  border: 3px solid #05668D;
+  background-color: $primary_color;
+  border: 3px solid $secondary-color;
   margin: 4px;
   padding: 2px;
   border-radius: 10px;
-  font-family: Copperplate;
+  font-family: $button-font;
 }
-
 .nav-button:hover {
   background-color: #21ACF6;
 }
-
 .project-button {
   color: #000000;
-  background-color: #05668D;
-  border: 3px solid #F1FFFE;
+  background-color: $secondary-color;
+  border: 3px solid $primary-color;
   margin: 4px;
   padding: 2px;
   border-radius: 10px;
-  font-family: Copperplate;
+  font-family: $button-font;
 }
-
 .project-button:hover {
   background-color: #21ACF6;
 }
 
 /* GENERAL TEXT STYLISATION */
 h1, h2 {
-  font-family: Papyrus;
+  font-family: $title-font;
 }
-
 h1 {
   text-decoration: underline;
 }
-
 p {
-  font-family: Monaco;
+  font-family: $p-font;
 }
+
 
 /* "WELCOME!" TITLE */
 header {
   text-align: center;
 }
-
 header h1 {
   padding: 6px 2px;
+  //background-color: $secondary-color;
   width: 190px;
-  border-right: 4px solid #F1FFFE;
+  border-right: 4px solid $primary-color;
   overflow: hidden;
   margin: 0 auto;
   margin-top: 50px;
-  animation: typing 2s steps(40, end), blink-caret 1s step-end infinite;
+  animation:
+          typing 2s steps(40, end),
+          blink-caret 1s step-end infinite;
 }
 
 /* TYPING EFFECT */
 @keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 200px;
-  }
+  from { width: 0 }
+  to { width: 200px }
 }
+
+///* TYPEWRITER CURSOR EFFECT */
+//@keyframes blink-caret {
+//  from, to { border-color: transparent }
+//  50% { border-color: #21ACF6; }
+//}
+
 /* ABOUT ME SECTION */
 main {
   display: flex;
@@ -91,30 +98,26 @@ main {
   width: 900px;
   margin: 20px auto;
 }
-
 .about-title {
   width: 30%;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #05668D;
+  background: $secondary-color;
 }
-
 .about-story {
   width: 70%;
-  background: #05668D;
+  background: $secondary-color;
   padding: 10px;
 }
-
 .about-interests {
   width: 55%;
-  background: #05668D;
+  background: $secondary-color;
   padding: 10px;
 }
-
 .about-aspirations {
   width: 45%;
-  background: #05668D;
+  background: $secondary-color;
   padding: 10px;
 }
 
@@ -122,29 +125,24 @@ main {
 summary h2 {
   text-decoration: underline;
 }
-
 summary {
   width: 900px;
   margin: 0 auto;
   padding: 2px;
-  background-color: #05668D;
+  background-color: $secondary-color;
   border: 2px solid #000000;
 }
-
 #portfolio h1 {
   text-align: center;
 }
-
 img {
   width: 250px;
   height: 200px;
 }
-
 .links {
   display: flex;
   justify-content: space-between;
 }
-
 .project {
   display: flex;
 }
@@ -162,11 +160,9 @@ footer {
   border: 2px solid;
   display: flex;
 }
-
 footer h2 {
   width: 130px;
 }
-
 .footer-content {
   margin: 2%;
 }
@@ -180,7 +176,6 @@ footer h2 {
   border-radius: 5px;
   padding: 5px 0 0 7px;
 }
-
 .fab:hover {
   border: 2px solid #ED2116;
   padding: 3px 0 0 5px;
@@ -192,16 +187,13 @@ footer h2 {
     flex-direction: column;
     width: 500px;
   }
-
   .about-title, .about-aspirations {
     width: 100%;
   }
-
   .about-story {
     background: linear-gradient(#21ACF6, #F6D621);
     width: 100%;
   }
-
   .about-interests {
     background: linear-gradient(#F6D621, #21ACF6);
     width: 100%;
@@ -211,19 +203,14 @@ footer h2 {
     flex-direction: column;
     width: 500px;
   }
-
   #portfolio {
     text-align: center;
   }
-
   .project {
     flex-wrap: wrap;
     justify-content: center;
   }
-
   .project p {
     margin: 10px 2px 2px 2px;
   }
 }
-
-/*# sourceMappingURL=styles.css.map */
