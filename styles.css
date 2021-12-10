@@ -20,30 +20,25 @@ nav {
 
 /* <a> TAG DESIGN */
 .nav-button {
-  color: #000000;
-  background-color: #F1FFFE;
-  border: 3px solid #05668D;
-  margin: 4px;
+  border: 2px solid #05668D;
   padding: 10px;
-  border-radius: 10px;
-  font-family: Copperplate;
-}
-
-.nav-button:hover {
-  background-color: #21ACF6;
+  margin: 4px 0;
+  text-align: center;
 }
 
 .project-button {
+  border: 2px solid #05668D;
+  padding: 2px;
+}
+
+a {
   color: #000000;
   background-color: #F1FFFE;
-  border: 3px solid #05668D;
-  margin: 4px;
-  padding: 2px;
   border-radius: 10px;
   font-family: Copperplate;
 }
 
-.project-button:hover {
+a:hover {
   background-color: #21ACF6;
 }
 
@@ -60,16 +55,23 @@ p {
   font-family: Monaco;
 }
 
+h1, h2, p {
+  color: #000000;
+}
+
 /* INTRODUCTION SECTION */
 .intro {
   text-align: center;
-  margin-top: 300px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 900px;
+  margin: 100px auto 0 auto;
 }
 
 .intro h2 {
-  width: 190px;
   border-right: 4px solid #F1FFFE;
   overflow: hidden;
+  white-space: nowrap;
   margin: 0 auto;
   margin-top: 50px;
   animation: typing 2s steps(40, end), blink-caret 1s step-end infinite;
@@ -81,64 +83,36 @@ p {
     width: 0;
   }
   to {
-    width: 200px;
+    width: 180px;
   }
 }
-/* ABOUT ME SECTION */
-main {
-  display: flex;
-  flex-wrap: wrap;
-  width: 900px;
-  margin: 20px auto;
+/* TYPEWRITER CURSOR EFFECT */
+@keyframes blink-caret {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #21ACF6;
+  }
 }
-
-.about-title {
-  width: 30%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #05668D;
-}
-
-.about-story {
-  width: 70%;
-  background: #05668D;
-  padding: 10px;
-}
-
-.about-interests {
-  width: 55%;
-  background: #05668D;
-  padding: 10px;
-}
-
-.about-aspirations {
-  width: 45%;
-  background: #05668D;
-  padding: 10px;
-}
-
 /* PORTFOLIO SECTION */
-.portfolio h2 {
-  text-decoration: underline;
-}
-
 .portfolio {
-  width: 900px;
+  width: 1100px;
   margin: 80px auto;
   padding: 2px;
 }
 
 .portfolio h1 {
   text-align: center;
+  margin-bottom: 50px;
 }
 
 .projectImage {
-  width: 250px;
-  height: 200px;
+  width: 500px;
+  height: 300px;
   border: 3px solid #000000;
   border-radius: 100px;
-  margin-right: 50px;
+  margin-right: 100px;
 }
 
 .links {
@@ -152,46 +126,69 @@ main {
 }
 
 .projectPlusLinks {
-  margin: 0 0 100px 0;
+  margin-bottom: 120px;
 }
 
 summary p {
   margin-left: 15px;
 }
 
-/* FOOTER/CONTACT SECTION */
-footer {
-  background-color: #D6FFFD;
-  margin-top: 60px;
-  padding: 1px;
-  color: #000000;
-  border-top: 2px solid #000000;
+/* ABOUT ME SECTION */
+.about-me {
   display: flex;
-  bottom: 0;
+  flex-wrap: wrap;
+  width: 900px;
+  margin: 85px auto;
+}
+
+.about-story {
+  width: 100%;
+  padding: 10px;
+}
+
+.about-interests {
+  width: 55%;
+  padding: 10px;
+}
+
+.about-interests p {
+  margin-right: 10px;
+}
+
+.about-aspirations {
+  width: 45%;
+  padding: 10px;
+}
+
+/* SOCIAL LINKS */
+.socialLinks {
   position: fixed;
+  display: flex;
+  flex-wrap: wrap;
+  bottom: 50%;
+  right: 0;
 }
 
-footer h2 {
-  width: 130px;
-}
-
-.footer-content {
-  margin: 2%;
+.socialLinks aside {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 4px 0;
 }
 
 /* SOCIAL MEDIA ICONS */
 .fab {
   background-color: #3B5998;
   color: #FFFFFF;
-  height: 28px;
-  width: 28px;
+  height: 32px;
+  width: 32px;
   border-radius: 5px;
-  padding: 5px 0 0 7px;
+  padding: 7px 0 0 9px;
 }
 
 .fab:hover {
   border: 2px solid #ED2116;
-  padding: 3px 0 0 5px;
+  padding: 5px 0 0 7px;
 }
 
 /* MEDIA QUERIES */
@@ -206,12 +203,10 @@ footer h2 {
   }
 
   .about-story {
-    background: linear-gradient(#21ACF6, #F6D621);
     width: 100%;
   }
 
   .about-interests {
-    background: linear-gradient(#F6D621, #21ACF6);
     width: 100%;
   }
 

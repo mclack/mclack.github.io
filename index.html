@@ -9,37 +9,121 @@
 	<link rel="stylesheet" href="styles.css" type="text/css" />
 </head>
 
-<body class="indexBody">
+<body>
 	
-	<!-- FIXED NAV BAR -->
-	<nav>
-		<a href="index.html" class="nav-button">Home</a>
-		<a href="aboutMe.html" class="nav-button">About Me</a>
-		<a href="projects.html" class="nav-button">Portfolio</a>
-		<a href="#footer" class="nav-button">Social Links</a>
-		<a href="mailto:miloclack@hotmail.co.uk" class="nav-button" target="_blank">Email Me</a>
-	</nav>
+<!-- FIXED NAV BAR -->
+<nav>
+	<a href="index.html" class="nav-button">Home</a>
+	<a href="aboutMe.html" class="nav-button">About Me</a>
+	<a href="mailto:miloclack@hotmail.co.uk" class="nav-button" target="_blank">Email Me</a>
+</nav>
 
-	<main class="intro">
-		<h2>Hi, I'm Milo</h2>
-		<p>A full-stack developer Lorem ipsum dolor sit amet,
-			consectetur adipisicing elit. A accusantium distinctio eaque eveniet hic,
-			id nulla quo similique veritatis vero. Assumenda consequuntur deserunt,
-			facilis nesciunt quam sit suscipit temporibus ullam!</p>
-	</main>
+<main class="intro">
+	<h2>Hi, I'm Milo</h2>
+	<p>
+		I'm a full-stack developer who takes immense satisfaction out of solving problems
+		and discovering new ways of tackling even more problems. Please check out my portfolio below!
+		(After all, that's what you're really here for, isn't it?)
+	</p>
+</main>
 
-	<!-- CONTACT INFORMATION/SOCIAL LINKS PROVIDED ON FOOTER -->
-	<footer id="footer">
-		<div class="footer-content">
-			<h2>Social Links</h2>
-			<a href="https://github.com/mclack" class="fab fa-github-square" target="_blank"></a>
-			<a href="#" class="fab fa-linkedin"></a>
+<!-- PORTFOLIO PROJECTS -->
+<section class="portfolio">
+
+	<div class="projectPlusLinks">
+		<h1>iO Academy Portal (Legacy Codebase)</h1>
+		<div class="project">
+			<div>
+				<img class="projectImage" src="assets/ioPortalScreenshotCompressed.png" alt="The daily commute" />
+			</div>
+			<p>
+				Built upon a legacy codebase using Slim, following the MVC design pattern in place. Found a
+				pattern to a known bug to narrow down the cause and fix it. <br><br> I went about
+				adding lock functionality to prevent deletion of applicant stages. I edited pre-existing
+				Bootstrap classes for this page to incorporate lock icons and neaten the layout. jQuery was
+				prominent, so I had to learn more jQuery on the fly to fit with existing code.
+			</p>
 		</div>
-		
-		<div class="footer-content">
-			<p>And that concludes my portfolio webpage! Please make sure to check out any of my social media links provided on the left of this text if you would like to do so. You can also contact me using the <a href="mailto:miloclack@hotmail.co.uk" class="nav-button" target="_blank">Email Me</a> button. Thank you for your time!</p>
+		<div class="links">
+			<a href="https://portal.dev.io-academy.uk/" target="_blank" class="project-button">Live Project</a>
+			<a href="https://github.com/iO-Academy/AcademyPortal" target="_blank" class="project-button">Github Project</a>
 		</div>
-	</footer>
-	
+	</div>
+
+	<div class="projectPlusLinks">
+		<h1>Snakesweeper</h1>
+		<div class="project">
+			<div>
+				<img class="projectImage" src="assets/snakesweeperScreenshotCompressed.png" alt="The daily commute" />
+			</div>
+			<p>
+				Created a Minesweeper-esque JavaScript game where the user dictates the size of the game
+				and how many lynx they wish to find in a randomly generated forest of snakes.<br><br>
+				I utilised the unique powers of JS to dynamically render the amount of lives a user would have
+				before starting the game, based on how many lynx they wish to find.<br><br>Also used a modal which
+				was set as hidden in CSS by default, which is triggered to display through JS when the game ends
+				with the modal message being set differently dependent on a win or loss. Also set a default error
+				message on the modal as a preventative measure against bugs, in case there happens to be an issue
+				with setting the win/loss message.
+			</p>
+		</div>
+		<div class="links">
+			<a href="https://dev.io-academy.uk/projects/2021-aug/2021-aug-snakeSweeper/" target="_blank" class="project-button">Live Project</a>
+			<a href="https://github.com/iO-Academy/AcademyPortal" target="_blank" class="project-button">Github Project</a>
+		</div>
+	</div>
+
+	<div class="projectPlusLinks">
+		<h1>iO Academy Aptitude Test</h1>
+		<div class="project">
+			<div>
+				<img class="projectImage" src="assets/aptitudeScreenshot.png" alt="Question view page from the iO Academy aptitude test" />
+			</div>
+			<p>
+				Rebuilt the Academy aptitude test in React, harnessing JavaScript to dynamically render
+				pages with reusable components. Working in 3 teams of 8, communication and sufficient sprint
+				planning was paramount to our success. I optimised the codebase from the start to minimise
+				technical debt. Also fetched correct answers from a RESTful API to compare with user answers.
+			</p>
+		</div>
+		<div class="links">
+			<a href="https://aptitude-test.dev.io-academy.uk/" target="_blank" class="project-button">Live Project</a>
+			<a href="https://github.com/iO-Academy/aptitude-test-react" target="_blank" class="project-button">Github Project</a>
+		</div>
+	</div>
+
+	<div class="projectPlusLinks">
+		<h1>Muppets Collection</h1>
+		<div class="project">
+			<div>
+				<img class="projectImage" src="assets/muppetScreenshot-min.png" alt="Muppet app index page" />
+			</div>
+			<p>
+				Utilised OOP within PHP, as well as the hydrator design pattern to retrieve muppets and
+				their stats to display on the front-end. I worked on multiple tasks across the project such
+				as the 'more details' feature on each muppet which retrieved a single entity from the database
+				to display on a new page. Worked on error handling to make sure users couldn't put an incorrect
+				ID directly into the URL without being sent back with a custom error. Made use of mocking in
+				unit tests to decouple dependencies that certain methods had. Also sanitised and validated
+				user input for partial search queries to the DB.
+			</p>
+		</div>
+		<div class="links">
+			<a href="https://dev.io-academy.uk/projects/2021-aug/OOPMuppets/index.php" target="_blank" class="project-button">Live Project</a>
+			<a href="https://github.com/iO-Academy/2021-aug-oopMuppets" target="_blank" class="project-button">Github Project</a>
+		</div>
+	</div>
+
+</section>
+
+<!-- SOCIAL LINKS FIXED TO RIGHT SIDE -->
+<div class="socialLinks">
+	<aside>
+		<a href="https://github.com/mclack" class="fab fa-github-square" target="_blank"></a>
+	</aside>
+	<aside>
+		<a href="https://www.linkedin.com/in/milo-clack-69549621a/" target="_blank" class="fab fa-linkedin"></a>
+	</aside>
+</div>
 </body>
 </html>

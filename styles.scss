@@ -1,6 +1,15 @@
+// Experimental color scheme:
+//$primary-color: #121619;
+//$primary-shade: #222A2F;
+//$secondary-color: #05668D;
+//$text-color: #F1A208;
+
+//Original color scheme:
 $primary-color: #F1FFFE;
 $primary-shade: #D6FFFD;
 $secondary-color: #05668D;
+$text-color: #000000;
+
 $title-font: Monaco;
 $button-font: Copperplate;
 $p-font: Monaco;
@@ -28,27 +37,26 @@ nav {
 
 /* <a> TAG DESIGN */
 .nav-button {
-  color: #000000;
-  background-color: $primary_color;
-  border: 3px solid $secondary-color;
-  margin: 4px;
+  border: 2px solid $secondary-color;
   padding: 10px;
-  border-radius: 10px;
-  font-family: $button-font;
+  margin: 4px 0;
+  text-align: center;
 }
-.nav-button:hover {
-  background-color: #21ACF6;
-}
+//.nav-button:hover {
+//  background-color: #21ACF6;
+//}
 .project-button {
-  color: #000000;
-  background-color: $primary-color;
-  border: 3px solid $secondary-color;
-  margin: 4px;
+  border: 2px solid $secondary-color;
   padding: 2px;
+}
+a {
+  color: $text-color;
+  background-color: $primary-color;
+  //border: 2px solid $secondary-color;
   border-radius: 10px;
   font-family: $button-font;
 }
-.project-button:hover {
+a:hover {
   background-color: #21ACF6;
 }
 
@@ -62,92 +70,56 @@ h1 {
 p {
   font-family: $p-font;
 }
+h1, h2, p {
+  color: $text-color;
+}
 
 
 /* INTRODUCTION SECTION */
 .intro {
   text-align: center;
-  margin-top: 300px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 900px;
+  margin: 100px auto 0 auto;
 }
 .intro h2 {
-  width: 190px;
   border-right: 4px solid $primary-color;
   overflow: hidden;
+  white-space: nowrap;
   margin: 0 auto;
   margin-top: 50px;
-  animation:
-          typing 2s steps(40, end),
-          blink-caret 1s step-end infinite;
+  animation: typing 2s steps(40, end), blink-caret 1s step-end infinite;
 }
-//.indexBody {
-//  height: 1200px;
-//  display: flex;
-//  flex-wrap: wrap;
-//  align-items: center;
-//}
 
 /* TYPING EFFECT */
 @keyframes typing {
   from { width: 0 }
-  to { width: 200px }
+  to { width: 180px }
 }
 
-///* TYPEWRITER CURSOR EFFECT */
-//@keyframes blink-caret {
-//  from, to { border-color: transparent }
-//  50% { border-color: #21ACF6; }
-//}
-
-/* ABOUT ME SECTION */
-main {
-  display: flex;
-  flex-wrap: wrap;
-  //border: 2px solid #000000;
-  width: 900px;
-  margin: 20px auto;
-}
-.about-title {
-  width: 30%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: $secondary-color;
-}
-.about-story {
-  width: 70%;
-  background: $secondary-color;
-  padding: 10px;
-}
-.about-interests {
-  width: 55%;
-  background: $secondary-color;
-  padding: 10px;
-}
-.about-aspirations {
-  width: 45%;
-  background: $secondary-color;
-  padding: 10px;
+/* TYPEWRITER CURSOR EFFECT */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #21ACF6; }
 }
 
 /* PORTFOLIO SECTION */
-.portfolio h2 {
-  text-decoration: underline;
-}
 .portfolio {
-  width: 900px;
+  width: 1100px;
   margin: 80px auto;
   padding: 2px;
-  //background-color: $secondary-color;
 }
 .portfolio h1 {
   text-align: center;
+  margin-bottom: 50px;
 }
 .projectImage {
-  width: 250px;
-  height: 200px;
+  width: 500px;
+  height: 300px;
   border: 3px solid #000000;
   border-radius: 100px;
-  margin-right: 50px;
+  margin-right: 100px;
 }
 .links {
   display: flex;
@@ -158,43 +130,62 @@ main {
   display: flex;
 }
 .projectPlusLinks {
-  margin: 0 0 100px 0;
+  margin-bottom: 120px;
 }
-
 summary p {
   margin-left: 15px;
 }
 
-/* FOOTER/CONTACT SECTION */
-footer {
-  background-color: $primary-shade;
-  margin-top: 60px;
-  padding: 1px;
-  color: #000000;
-  border-top: 2px solid #000000;
+/* ABOUT ME SECTION */
+.about-me {
   display: flex;
-  bottom: 0;
+  flex-wrap: wrap;
+  width: 900px;
+  margin: 85px auto;
+}
+.about-story {
+  width: 100%;
+  padding: 10px;
+}
+.about-interests {
+  width: 55%;
+  padding: 10px;
+}
+.about-interests p {
+  margin-right: 10px;
+}
+.about-aspirations {
+  width: 45%;
+  padding: 10px;
+}
+
+/* SOCIAL LINKS */
+.socialLinks {
   position: fixed;
+  display: flex;
+  flex-wrap: wrap;
+  bottom: 50%;
+  right: 0;
 }
-footer h2 {
-  width: 130px;
-}
-.footer-content {
-  margin: 2%;
+.socialLinks aside {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 4px 0;
 }
 
 /* SOCIAL MEDIA ICONS */
 .fab {
   background-color: #3B5998;
   color: #FFFFFF;
-  height: 28px;
-  width: 28px;
+  height: 32px;
+  width: 32px;
   border-radius: 5px;
-  padding: 5px 0 0 7px;
+  padding: 7px 0 0 9px;
 }
 .fab:hover {
   border: 2px solid #ED2116;
-  padding: 3px 0 0 5px;
+  padding: 5px 0 0 7px;
 }
 
 /* MEDIA QUERIES */
@@ -207,11 +198,9 @@ footer h2 {
     width: 100%;
   }
   .about-story {
-    background: linear-gradient(#21ACF6, #F6D621);
     width: 100%;
   }
   .about-interests {
-    background: linear-gradient(#F6D621, #21ACF6);
     width: 100%;
   }
 
