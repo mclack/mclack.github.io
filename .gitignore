@@ -8,7 +8,7 @@ bin-release/
 .settings/
 Wireframes
 .DS_Store
-
+.idea
 # Executables
 *.swf
 *.air

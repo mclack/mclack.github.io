@@ -7,22 +7,29 @@
 	<link rel="stylesheet" href="normalize.css" type="text/css" />
 	<script src="https://kit.fontawesome.com/f1113e7579.js" crossorigin="anonymous"></script>
 	<link rel="stylesheet" href="styles.css" type="text/css" />
+	<script defer src="index.js"></script>
 </head>
 
 <body>
 	
 <!-- FIXED NAV BAR -->
 <nav>
-	<a href="index.html" class="nav-button">Home</a>
-	<a href="aboutMe.html" class="nav-button">About Me</a>
-	<a href="mailto:miloclack@hotmail.co.uk" class="nav-button" target="_blank">Email Me</a>
+	<div class="button">
+		<a href="index.html">Home</a>
+	</div>
+	<div class="button">
+		<a href="aboutMe.html">About Me</a>
+	</div>
+	<div class="button emailBtn">
+		<a class="tooltip">miloclack@gmail.com<span class="tooltipText">Email Copied!</span></a>
+	</div>
 </nav>
 
 <main class="intro">
 	<h2>Hi, I'm Milo</h2>
 	<p>
 		I'm a full-stack developer who takes immense satisfaction out of solving problems
-		and discovering new ways of tackling even more problems. Please check out my portfolio below!
+		and discovering new ways of tackling even more problems. Please check out my portfolio below!<br>
 		(After all, that's what you're really here for, isn't it?)
 	</p>
 </main>
@@ -37,21 +44,26 @@
 				<img class="projectImage" src="assets/ioPortalScreenshotCompressed.png" alt="The daily commute" />
 			</div>
 			<p>
-				Built upon a legacy codebase using Slim, following the MVC design pattern in place. Found a
-				pattern to a known bug to narrow down the cause and fix it. <br><br> I went about
-				adding lock functionality to prevent deletion of applicant stages. I edited pre-existing
-				Bootstrap classes for this page to incorporate lock icons and neaten the layout. jQuery was
-				prominent, so I had to learn more jQuery on the fly to fit with existing code.
+				Built upon a legacy codebase using Slim, following the MVC design pattern in place and
+				adhering to SOLID principles.<br><br>Found a pattern for a known bug in order to narrow down the
+				cause and fix it. Also went about adding lock functionality to prevent deletion of applicant
+				stages. I edited pre-existing Bootstrap classes for this page to incorporate lock icons and
+				neaten the layout.<br><br>jQuery was prominent, so I had to learn more jQuery on the fly to fit with
+				existing code. Was also introduced to Continuous Integration checks when pushing to GitHub.
 			</p>
 		</div>
 		<div class="links">
-			<a href="https://portal.dev.io-academy.uk/" target="_blank" class="project-button">Live Project</a>
-			<a href="https://github.com/iO-Academy/AcademyPortal" target="_blank" class="project-button">Github Project</a>
+			<div class="button projectLink liveProjectLink">
+				<a href="https://portal.dev.io-academy.uk/" target="_blank">Live Project</a>
+			</div>
+			<div class="button projectLink">
+				<a href="https://github.com/iO-Academy/AcademyPortal" target="_blank">Github Project</a>
+			</div>
 		</div>
 	</div>
 
 	<div class="projectPlusLinks">
-		<h1>Snakesweeper</h1>
+		<h1>SnakeSweeper</h1>
 		<div class="project">
 			<div>
 				<img class="projectImage" src="assets/snakesweeperScreenshotCompressed.png" alt="The daily commute" />
@@ -59,17 +71,21 @@
 			<p>
 				Created a Minesweeper-esque JavaScript game where the user dictates the size of the game
 				and how many lynx they wish to find in a randomly generated forest of snakes.<br><br>
-				I utilised the unique powers of JS to dynamically render the amount of lives a user would have
-				before starting the game, based on how many lynx they wish to find.<br><br>Also used a modal which
-				was set as hidden in CSS by default, which is triggered to display through JS when the game ends
-				with the modal message being set differently dependent on a win or loss. Also set a default error
+				I utilised the powers of JavaScript to dynamically render the amount of lives a user would have
+				before starting the game, based on how many lynx they wish to find.<br><br>Used a modal which
+				was set as hidden in CSS by default. It's triggered to display through JS when the game ends
+				with the modal message being set dependent on a win or loss. Also set a default error
 				message on the modal as a preventative measure against bugs, in case there happens to be an issue
 				with setting the win/loss message.
 			</p>
 		</div>
 		<div class="links">
-			<a href="https://dev.io-academy.uk/projects/2021-aug/2021-aug-snakeSweeper/" target="_blank" class="project-button">Live Project</a>
-			<a href="https://github.com/iO-Academy/AcademyPortal" target="_blank" class="project-button">Github Project</a>
+			<div class="button projectLink liveProjectLink">
+				<a href="https://dev.io-academy.uk/projects/2021-aug/2021-aug-snakeSweeper/" target="_blank">Live Project</a>
+			</div>
+			<div class="button projectLink">
+				<a href="https://github.com/iO-Academy/2021-aug-minesweeper" target="_blank">Github Project</a>
+			</div>
 		</div>
 	</div>
 
@@ -81,14 +97,19 @@
 			</div>
 			<p>
 				Rebuilt the Academy aptitude test in React, harnessing JavaScript to dynamically render
-				pages with reusable components. Working in 3 teams of 8, communication and sufficient sprint
+				pages with reusable components.<br><br>Working in 3 teams of 8, communication and sufficient sprint
 				planning was paramount to our success. I optimised the codebase from the start to minimise
-				technical debt. Also fetched correct answers from a RESTful API to compare with user answers.
+				technical debt. Also fetched correct answers from a RESTful API to compare with user answers
+				that were captured in application state.
 			</p>
 		</div>
 		<div class="links">
-			<a href="https://aptitude-test.dev.io-academy.uk/" target="_blank" class="project-button">Live Project</a>
-			<a href="https://github.com/iO-Academy/aptitude-test-react" target="_blank" class="project-button">Github Project</a>
+			<div class="button projectLink liveProjectLink">
+				<a href="https://aptitude-test.dev.io-academy.uk/" target="_blank">Live Project</a>
+			</div>
+			<div class="button projectLink">
+				<a href="https://github.com/iO-Academy/aptitude-test-react" target="_blank">Github Project</a>
+			</div>
 		</div>
 	</div>
 
@@ -100,17 +121,21 @@
 			</div>
 			<p>
 				Utilised OOP within PHP, as well as the hydrator design pattern to retrieve muppets and
-				their stats to display on the front-end. I worked on multiple tasks across the project such
+				their stats to display on the front-end.<br><br>I worked on multiple tasks across the project such
 				as the 'more details' feature on each muppet which retrieved a single entity from the database
-				to display on a new page. Worked on error handling to make sure users couldn't put an incorrect
-				ID directly into the URL without being sent back with a custom error. Made use of mocking in
-				unit tests to decouple dependencies that certain methods had. Also sanitised and validated
-				user input for partial search queries to the DB.
+				to display on a new page. Also worked on error handling for this to make sure users couldn't put
+				an incorrect ID directly into the URL without being sent back with a custom error.<br><br>
+				Made use of mocking in unit tests to decouple dependencies that certain methods had.<br><br>
+				Sanitised and validated user input for partial search queries to the DB.
 			</p>
 		</div>
 		<div class="links">
-			<a href="https://dev.io-academy.uk/projects/2021-aug/OOPMuppets/index.php" target="_blank" class="project-button">Live Project</a>
-			<a href="https://github.com/iO-Academy/2021-aug-oopMuppets" target="_blank" class="project-button">Github Project</a>
+			<div class="button projectLink liveProjectLink">
+				<a href="https://dev.io-academy.uk/projects/2021-aug/OOPMuppets/index.php" target="_blank">Live Project</a>
+			</div>
+			<div class="button projectLink">
+				<a href="https://github.com/iO-Academy/2021-aug-oopMuppets" target="_blank">Github Project</a>
+			</div>
 		</div>
 	</div>
 
@@ -119,10 +144,10 @@
 <!-- SOCIAL LINKS FIXED TO RIGHT SIDE -->
 <div class="socialLinks">
 	<aside>
-		<a href="https://github.com/mclack" class="fab fa-github-square" target="_blank"></a>
+		<a href="https://github.com/mclack" class="socialLink fab fa-github-square" target="_blank"></a>
 	</aside>
 	<aside>
-		<a href="https://www.linkedin.com/in/milo-clack-69549621a/" target="_blank" class="fab fa-linkedin"></a>
+		<a href="https://www.linkedin.com/in/milo-clack-69549621a/" target="_blank" class="socialLink fab fa-linkedin"></a>
 	</aside>
 </div>
 </body>

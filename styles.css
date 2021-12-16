@@ -13,33 +13,53 @@ nav {
   background-color: #D6FFFD;
   display: flex;
   justify-content: space-around;
+  align-items: center;
   width: 100%;
   height: 60px;
   border-bottom: 3px solid #000000;
 }
 
 /* <a> TAG DESIGN */
-.nav-button {
+.button {
   border: 2px solid #05668D;
-  padding: 10px;
   margin: 4px 0;
   text-align: center;
-}
-
-.project-button {
-  border: 2px solid #05668D;
-  padding: 2px;
-}
-
-a {
+  text-decoration: underline;
+  cursor: pointer;
   color: #000000;
   background-color: #F1FFFE;
   border-radius: 10px;
   font-family: Copperplate;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 210px;
+  height: 30px;
 }
 
-a:hover {
+.button:hover {
   background-color: #21ACF6;
+}
+
+a {
+  color: #000000;
+}
+
+/* TOOLTIP */
+/* Tooltip text */
+.tooltipText {
+  visibility: hidden;
+  width: 120px;
+  top: 75%;
+  right: 10%;
+  background-color: black;
+  color: #FFF;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
 }
 
 /* GENERAL TEXT STYLISATION */
@@ -65,7 +85,7 @@ h1, h2, p {
   display: flex;
   flex-wrap: wrap;
   width: 900px;
-  margin: 100px auto 0 auto;
+  margin: 85px auto 0 auto;
 }
 
 .intro h2 {
@@ -98,7 +118,7 @@ h1, h2, p {
 /* PORTFOLIO SECTION */
 .portfolio {
   width: 1100px;
-  margin: 80px auto;
+  margin: 80px auto 0 auto;
   padding: 2px;
 }
 
@@ -111,14 +131,15 @@ h1, h2, p {
   width: 500px;
   height: 300px;
   border: 3px solid #000000;
-  border-radius: 100px;
+  border-radius: 20px;
   margin-right: 100px;
+  margin-top: 20px;
 }
 
 .links {
   display: flex;
-  justify-content: space-between;
   margin-top: 40px;
+  margin-right: 100px;
 }
 
 .project {
@@ -129,6 +150,10 @@ h1, h2, p {
   margin-bottom: 120px;
 }
 
+.liveProjectLink {
+  margin-right: 80px;
+}
+
 summary p {
   margin-left: 15px;
 }
@@ -137,27 +162,34 @@ summary p {
 .about-me {
   display: flex;
   flex-wrap: wrap;
+  margin: 85px auto 0 auto;
   width: 900px;
-  margin: 85px auto;
+  justify-content: center;
 }
 
-.about-story {
-  width: 100%;
-  padding: 10px;
+.about-story, .about-interests, .about-aspirations {
+  display: flex;
 }
 
-.about-interests {
-  width: 55%;
-  padding: 10px;
+.selfie {
+  border-radius: 15px;
+  border: 3px solid #000000;
+  height: 500px;
+  width: 400px;
+  margin: 10px 0 20px 20px;
 }
 
-.about-interests p {
-  margin-right: 10px;
+.selfieLeft {
+  margin: 10px 20px 20px 0;
 }
 
-.about-aspirations {
-  width: 45%;
-  padding: 10px;
+.landscape {
+  width: 800px;
+  margin: 80px 0 0 0;
+}
+
+.selfie-plus-about {
+  display: flex;
 }
 
 /* SOCIAL LINKS */
@@ -172,12 +204,11 @@ summary p {
 .socialLinks aside {
   width: 100%;
   display: flex;
-  justify-content: center;
-  margin: 4px 0;
+  justify-content: flex-end;
+  margin: 4px 8px;
 }
 
-/* SOCIAL MEDIA ICONS */
-.fab {
+.socialLink {
   background-color: #3B5998;
   color: #FFFFFF;
   height: 32px;
@@ -186,36 +217,15 @@ summary p {
   padding: 7px 0 0 9px;
 }
 
-.fab:hover {
+.socialLink:hover {
   border: 2px solid #ED2116;
   padding: 5px 0 0 7px;
+  background-color: #21ACF6;
 }
 
-/* MEDIA QUERIES */
-@media screen and (max-width: 950px) {
-  main {
-    flex-direction: column;
-    width: 500px;
-  }
-
-  .about-title, .about-aspirations {
-    width: 100%;
-  }
-
-  .about-story {
-    width: 100%;
-  }
-
-  .about-interests {
-    width: 100%;
-  }
-
-  summary {
-    flex-direction: column;
-    width: 500px;
-  }
-
-  #portfolio {
+/* HOME PAGE MEDIA QUERIES */
+@media screen and (max-width: 1200px) {
+  .portfolio {
     text-align: center;
   }
 
@@ -226,6 +236,47 @@ summary p {
 
   .project p {
     margin: 10px 2px 2px 2px;
+    width: 80%;
+  }
+
+  .projectImage {
+    margin: 20px 0;
+  }
+
+  .links {
+    justify-content: center;
+    margin: 30px 0 0 0;
+  }
+}
+@media screen and (max-width: 1050px) {
+  .intro, .portfolio {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 750px) {
+  .projectImage {
+    width: 450px;
+    height: 270px;
+  }
+}
+/* ABOUT ME PAGE MEDIA QUERIES */
+@media screen and (max-width: 975px) {
+  .about-story, .about-aspirations {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .about-story, .about-aspirations, .about-interests {
+    margin: 0 30px 40px 30px;
+  }
+
+  .about-interests {
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+  }
+
+  .about-story-text, .about-interests-text, .about-aspirations-text {
+    margin-bottom: 40px;
   }
 }
 
