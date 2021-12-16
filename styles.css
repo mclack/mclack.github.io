@@ -278,6 +278,10 @@ summary p {
   .about-story-text, .about-interests-text, .about-aspirations-text {
     margin-bottom: 40px;
   }
+
+  .selfie {
+    margin: 0;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
