@@ -2,105 +2,191 @@
 <html lang="en-GB">
 
 <head>
-	<title>Milo's Portfolio Website</title>
+	<title>Milo Clack Portfolio</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link rel="stylesheet" href="normalize.css" type="text/css" />
 	<script src="https://kit.fontawesome.com/f1113e7579.js" crossorigin="anonymous"></script>
 	<link rel="stylesheet" href="styles.css" type="text/css" />
+	<script defer src="index.js"></script>
 </head>
 
 <body>
 	
-	<!-- FIXED NAV BAR -->
-	<nav>
-		<a href="#" class="nav-button">Home</a>
-		<a href="#about-me" class="nav-button">About Me</a>
-		<a href="#portfolio" class="nav-button">Portfolio</a>
-		<a href="#footer" class="nav-button">Social Links</a>
-		<a href="mailto:miloclack@hotmail.co.uk" class="nav-button" target="_blank">Email Me</a>
-	</nav>
+<!-- FIXED NAV BAR -->
+<nav>
+	<div class="button">
+		<a href="index.html">Home</a>
+	</div>
+	<div class="button">
+		<a href="aboutMe.html">About Me</a>
+	</div>
+	<div class="button emailBtn">
+		<a class="tooltip">miloclack@gmail.com<span class="tooltipText">Email Copied!</span></a>
+	</div>
+</nav>
 
-	<header>
-		<h1>WELCOME!</h1>
-	</header>
-		
-	<!-- ABOUT ME SECTION -->
-	<main class="container">
-			<div class="about-title" id="about-me">
-				<h1>About me...</h1>
-			</div>
-			<div class="about-story">
-				<h2>The Story So Far...</h2>
-				<p>My journey in this corporeal dimension began on July the 8th 1998. I was born in the city of Oxford and lived there until I was 15, which is when I ended up moving to Waterlooville for a couple of years. By this point I became very demotivated and actually ended up dropping out of my A-Levels before moving on to Bristol to start music college. This gave me the spark of life I needed and reignited the passion in me. I had been a keen songwriter since the age of 11 and was getting more confident in my abilities as a vocalist, so I decided to take the plunge.<br><br>During this time I worked at the Bristol O2 Academy which was an incredible experience but also very tiring on top of college. This led me down a route of bartending for the next 5 or so years before I decided it was time to move onto greater things. This course was then suggested to me by my brother in law who now actually works at Mayden. It must've been a good sales pitch because here I am! </p>
-			</div>
-			<div class="about-interests">
-				<h2>My Interests...</h2>
-				<p>Music is without a doubt the main passion and outlet in my life. When I was 7 I was gripped by Heavy Metal music and have never looked back since. Even though my dad has played guitar all his life and was in many bands, it was actually Guitar Hero that convinced me to pick up a 6-string around the age of 10, although I wouldn't consider myself competent until I was about 19. I started a band about 3 years ago with someone I met at college and managed to recruit a couple more to join us about a year after that. We are now just finishing off our 6th song before we'll be ready to hit the stage!<br><br>I suppose my main other interest would be gaming as that occupies a lot of my free time, with my 2 favourite game series being Resident Evil and The Legend of Zelda. Finally I can add another passion to my rather short list and that creates my Holy Trinity: Music, Gaming and CODING! It's been a long time since I was learning this much and I must say it is rather satisfying.</p>
-			</div>
-			<div class="about-aspirations">
-				<h2>My Aspirations...</h2>
-				<p>Of course it would be a dream come true to be able to do music full-time, but my realistic goal is to at least get a couple of festival performances under my belt and to continue writing and performing for life as it's what gives me purpose and keeps me motivated! Having said this, I definitely see myself coding/developing for the foreseeable future.<br><br>Although I really don't have any idea about what I'd like to do after this course yet I'm very excited to learn more about what I'm good at and what I enjoy. This course definitely represents a big change in my life and I plan to move back to Bristol when I've settled into a job after this. I also plan on using what I learn here to create our own band website and make it stand out from the rest!</p>
-			</div>		
-	</main>
-	
-	<!-- PORTFOLIO SECTION -->
-	<summary id="portfolio">
-		<h1>My Portfolio</h1>
-		
-		<h2>Project One</h2>
+<main class="intro">
+	<h2>Hi, I'm Milo</h2>
+	<p>
+		I'm a full-stack developer who takes immense satisfaction out of solving problems
+		and discovering new ways of tackling even more problems. Please check out my portfolio below!<br>
+		(After all, that's what you're really here for, isn't it?)
+	</p>
+</main>
+
+<!-- PORTFOLIO PROJECTS -->
+<section class="portfolio">
+
+	<div class="projectPlusLinks">
+		<h1>Stock Tracking API</h1>
 		<div class="project">
 			<div>
-				<img src="https://www.pockettactics.com/wp-content/uploads/2021/03/run-godzilla-release-date-580x334.jpeg" alt="All hail Gojira" />
+<!--				<img class="projectImage" src="assets/stockTrackingAPIGetReq.png" alt="Screenshot showing a get request from stock tracking API that retrieves product data" />-->
+				<img class="projectImage" src="assets/stockTrackingSmaller.png" alt="Screenshot showing a get request from stock tracking API that retrieves product data" />
 			</div>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-			</p>
+			<div class="projectText">
+				<p>
+					Built an API using Express with Node that connects to an SQL database. It allows for
+					stock management, providing routes to add, edit, delete and retrieve product data
+					as well as manage customer orders.<br><br>The relational database allowed us to use a
+					table which joins customers and their orders, minimising the need for repeated data. The API will
+					add new customer data to the database but will re-use customer data for returning customers when
+					adding an order. It will also automatically update current stock quantity when orders are made,
+					giving reliable feedback on what stock is currently left to be sold.<br><br>
+					When a new product is entered a unique SKU is generated which the product can be identified by.
+				</p>
+			</div>
 		</div>
 		<div class="links">
-			<a href="#" class="project-button">Live Project</a>
-			<a href="#" class="project-button">Git Project</a>
+			<div class="button projectLink liveProjectLink inactiveLink">
+				<a class="inactiveLink">No Front-End</a>
+			</div>
+			<div class="button projectLink">
+				<a href="https://github.com/iO-Academy/2021-aug-stock" target="_blank">Github Project</a>
+			</div>
 		</div>
-		
-		<h2>Project Two</h2>
+	</div>
+
+	<div class="projectPlusLinks">
+		<h1>SnakeSweeper</h1>
 		<div class="project">
 			<div>
-				<img src="http://mountainrants.weebly.com/uploads/1/8/2/8/18281761/cheese_orig.jpg" alt="The biggest yum (cheeeeeese)" />
-		</div>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-			</p>
+				<img class="projectImage" src="assets/snakesweeperScreenshotCompressed.png" alt="Screenshot showing a Snakesweeper game in progress" />
+			</div>
+			<div class="projectText">
+				<p>
+					Created a Minesweeper-esque JavaScript game where the user dictates the size of the game
+					and how many lynx they wish to find in a randomly generated forest of snakes.<br><br>
+					I utilised the powers of JavaScript to dynamically render the amount of lives a user would have
+					before starting the game, based on how many lynx they wish to find.<br><br>Used a modal which
+					was set as hidden in CSS by default. It's triggered to display through JS when the game ends
+					with the modal message being set dependent on a win or loss. Also set a default error
+					message on the modal as a preventative measure against bugs, in case there happens to be an issue
+					with setting the win/loss message.
+				</p>
+			</div>
 		</div>
 		<div class="links">
-			<a href="#" class="project-button">Live Project</a>
-			<a href="#" class="project-button">Git Project</a>
+			<div class="button projectLink liveProjectLink">
+				<a href="https://dev.io-academy.uk/projects/2021-aug/2021-aug-snakeSweeper/" target="_blank">Live Project</a>
+			</div>
+			<div class="button projectLink">
+				<a href="https://github.com/iO-Academy/2021-aug-minesweeper" target="_blank">Github Project</a>
+			</div>
 		</div>
-		
-		<h2>Project Three</h2>
+	</div>
+
+	<div class="projectPlusLinks">
+		<h1>Muppets Collection</h1>
 		<div class="project">
 			<div>
-				<img src="https://images.theconversation.com/files/83811/original/image-20150603-2935-c62zxj.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1200&h=1200.0&fit=crop" alt="The daily commute" />
+				<img class="projectImage" src="assets/muppetScreenshot-min.png" alt="Screenshot of Muppet app index page" />
 			</div>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-			</p>
+			<div class="projectText">
+				<p>
+					Utilised OOP within PHP, as well as the hydrator design pattern to retrieve muppets and
+					their stats to display on the front-end.<br><br>I worked on multiple tasks across the project such
+					as the 'more details' feature on each muppet which retrieved a single entity from the database
+					to display on a new page. Also worked on error handling for this to make sure users couldn't put
+					an incorrect ID directly into the URL without being sent back with a custom error.<br><br>
+					Made use of mocking in unit tests to decouple dependencies that certain methods had.<br><br>
+					Sanitised and validated user input for partial search queries to the DB.
+				</p>
+			</div>
 		</div>
 		<div class="links">
-			<a href="#" class="project-button">Live Project</a>
-			<a href="#" class="project-button">Git Project</a>
-		</div>	
-	</summary>
-	
-	<!-- CONTACT INFORMATION/SOCIAL LINKS PROVIDED ON FOOTER -->
-	<footer id="footer">
-		<div class="footer-content">
-			<h2>Social Links</h2>
-			<a href="#" class="fab fa-facebook-square"></a>
-			<a href="https://github.com/mclack" class="fab fa-github-square" target="_blank"></a>
-			<a href="#" class="fab fa-linkedin"></a>
-			<a href="#" class="fab fa-instagram-square"></a>
+			<div class="button projectLink liveProjectLink">
+				<a href="https://dev.io-academy.uk/projects/2021-aug/OOPMuppets/index.php" target="_blank">Live Project</a>
+			</div>
+			<div class="button projectLink">
+				<a href="https://github.com/iO-Academy/2021-aug-oopMuppets" target="_blank">Github Project</a>
+			</div>
 		</div>
-		
-		<div class="footer-content">
-			<p>And that concludes my portfolio webpage! Please make sure to check out any of my social media links provided on the left of this text if you would like to do so. You can also contact me using the <a href="mailto:miloclack@hotmail.co.uk" class="nav-button" target="_blank">Email Me</a> button. Thank you for your time!</p>
+	</div>
+
+	<div class="projectPlusLinks">
+		<h1>iO Academy Portal (Legacy Codebase)</h1>
+		<div class="project">
+			<div>
+				<img class="projectImage" src="assets/ioPortalScreenshotCompressed.png" alt="Screenshot showing the applicant stages view on the iO Academy Portal" />
+			</div>
+			<div class="projectText">
+				<p>
+					Built upon a legacy codebase using OOP & JavaScript with Slim. Followed the MVC design pattern in place
+					and adhered to SOLID principles.<br><br>Found a pattern for a known bug in order to narrow down the
+					cause and fix it. Also went about adding lock functionality to prevent deletion of applicant
+					stages. I edited pre-existing Bootstrap classes for this page to incorporate lock icons and
+					neaten the layout.<br><br>jQuery was prominent, so I had to learn more jQuery on the fly to fit with
+					existing code. Was also introduced to Continuous Integration checks when pushing to GitHub.
+				</p>
+			</div>
 		</div>
-	</footer>
-	
+		<div class="links">
+			<div class="button projectLink liveProjectLink">
+				<a href="https://portal.dev.io-academy.uk/" target="_blank">Live Project</a>
+			</div>
+			<div class="button projectLink">
+				<a href="https://github.com/iO-Academy/AcademyPortal" target="_blank">Github Project</a>
+			</div>
+		</div>
+	</div>
+
+	<div class="projectPlusLinks bottomProject">
+		<h1>iO Academy Aptitude Test</h1>
+		<div class="project">
+			<div>
+				<img class="projectImage" src="assets/aptitudeScreenshot.png" alt="Screenshot showing question view page from the iO Academy aptitude test" />
+			</div>
+			<div class="projectText">
+				<p>
+					Rebuilt the Academy aptitude test in React, harnessing JavaScript to dynamically render
+					pages with reusable components.<br><br>Working in 3 teams of 8, communication and sufficient sprint
+					planning was paramount to our success. I optimised the codebase from the start to minimise
+					technical debt. Also fetched correct answers from a RESTful API to compare with user answers
+					that were captured in application state.
+				</p>
+			</div>
+		</div>
+		<div class="links">
+			<div class="button projectLink liveProjectLink">
+				<a href="https://aptitude-test.dev.io-academy.uk/" target="_blank">Live Project</a>
+			</div>
+			<div class="button projectLink">
+				<a href="https://github.com/iO-Academy/aptitude-test-react" target="_blank">Github Project</a>
+			</div>
+		</div>
+	</div>
+
+</section>
+
+<!-- SOCIAL LINKS FIXED TO RIGHT SIDE -->
+<div class="socialLinks">
+	<aside>
+		<a href="https://github.com/mclack" class="socialLink fab fa-github-square" target="_blank"></a>
+	</aside>
+	<aside>
+		<a href="https://www.linkedin.com/in/milo-clack-69549621a/" target="_blank" class="socialLink fab fa-linkedin"></a>
+	</aside>
+</div>
 </body>
 </html>
