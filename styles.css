@@ -280,6 +280,11 @@ summary p {
         height: 270px;
     }
 }
+@media screen and (max-width: 520px) {
+    .projectImage {
+        width: 400px;
+    }
+}
 /* ABOUT ME PAGE MEDIA QUERIES */
 @media screen and (max-width: 975px) {
     .about-story, .about-aspirations {
