@@ -45,6 +45,14 @@ a {
   color: #000000;
 }
 
+.inactiveLink {
+  cursor: not-allowed;
+}
+
+.inactiveLink:hover {
+  background-color: #F1FFFE;
+}
+
 /* TOOLTIP */
 /* Tooltip text */
 .tooltipText {
@@ -128,12 +136,17 @@ h1, h2, p {
 }
 
 .projectImage {
-  width: 500px;
-  height: 300px;
+  width: 530px;
+  height: 350px;
   border: 3px solid #000000;
   border-radius: 20px;
   margin-right: 100px;
   margin-top: 20px;
+}
+
+.projectText {
+  display: flex;
+  align-items: center;
 }
 
 .links {
@@ -148,6 +161,10 @@ h1, h2, p {
 
 .projectPlusLinks {
   margin-bottom: 120px;
+}
+
+.bottomProject {
+  margin-bottom: 40px;
 }
 
 .liveProjectLink {
@@ -237,6 +254,10 @@ summary p {
   .project p {
     margin: 10px 2px 2px 2px;
     width: 80%;
+  }
+
+  .projectText {
+    justify-content: center;
   }
 
   .projectImage {

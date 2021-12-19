@@ -2,7 +2,7 @@
 <html lang="en-GB">
 
 <head>
-	<title>Milo's Portfolio Website</title>
+	<title>Milo Clack Portfolio</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link rel="stylesheet" href="normalize.css" type="text/css" />
 	<script src="https://kit.fontawesome.com/f1113e7579.js" crossorigin="anonymous"></script>
@@ -38,26 +38,31 @@
 <section class="portfolio">
 
 	<div class="projectPlusLinks">
-		<h1>iO Academy Portal (Legacy Codebase)</h1>
+		<h1>Stock Tracking API</h1>
 		<div class="project">
 			<div>
-				<img class="projectImage" src="assets/ioPortalScreenshotCompressed.png" alt="The daily commute" />
+<!--				<img class="projectImage" src="assets/stockTrackingAPIGetReq.png" alt="Screenshot showing a get request from stock tracking API that retrieves product data" />-->
+				<img class="projectImage" src="assets/stockTrackingSmaller.png" alt="Screenshot showing a get request from stock tracking API that retrieves product data" />
 			</div>
-			<p>
-				Built upon a legacy codebase using Slim, following the MVC design pattern in place and
-				adhering to SOLID principles.<br><br>Found a pattern for a known bug in order to narrow down the
-				cause and fix it. Also went about adding lock functionality to prevent deletion of applicant
-				stages. I edited pre-existing Bootstrap classes for this page to incorporate lock icons and
-				neaten the layout.<br><br>jQuery was prominent, so I had to learn more jQuery on the fly to fit with
-				existing code. Was also introduced to Continuous Integration checks when pushing to GitHub.
-			</p>
+			<div class="projectText">
+				<p>
+					Built an API using Express with Node that connects to an SQL database. It allows for
+					stock management, providing routes to add, edit, delete and retrieve product data
+					as well as manage customer orders.<br><br>The relational database allowed us to use a
+					table which joins customers and their orders, minimising the need for repeated data. The API will
+					add new customer data to the database but will re-use customer data for returning customers when
+					adding an order. It will also automatically update current stock quantity when orders are made,
+					giving reliable feedback on what stock is currently left to be sold.<br><br>
+					When a new product is entered a unique SKU is generated which the product can be identified by.
+				</p>
+			</div>
 		</div>
 		<div class="links">
-			<div class="button projectLink liveProjectLink">
-				<a href="https://portal.dev.io-academy.uk/" target="_blank">Live Project</a>
+			<div class="button projectLink liveProjectLink inactiveLink">
+				<a class="inactiveLink">No Front-End</a>
 			</div>
 			<div class="button projectLink">
-				<a href="https://github.com/iO-Academy/AcademyPortal" target="_blank">Github Project</a>
+				<a href="https://github.com/iO-Academy/2021-aug-stock" target="_blank">Github Project</a>
 			</div>
 		</div>
 	</div>
@@ -66,18 +71,20 @@
 		<h1>SnakeSweeper</h1>
 		<div class="project">
 			<div>
-				<img class="projectImage" src="assets/snakesweeperScreenshotCompressed.png" alt="The daily commute" />
+				<img class="projectImage" src="assets/snakesweeperScreenshotCompressed.png" alt="Screenshot showing a Snakesweeper game in progress" />
 			</div>
-			<p>
-				Created a Minesweeper-esque JavaScript game where the user dictates the size of the game
-				and how many lynx they wish to find in a randomly generated forest of snakes.<br><br>
-				I utilised the powers of JavaScript to dynamically render the amount of lives a user would have
-				before starting the game, based on how many lynx they wish to find.<br><br>Used a modal which
-				was set as hidden in CSS by default. It's triggered to display through JS when the game ends
-				with the modal message being set dependent on a win or loss. Also set a default error
-				message on the modal as a preventative measure against bugs, in case there happens to be an issue
-				with setting the win/loss message.
-			</p>
+			<div class="projectText">
+				<p>
+					Created a Minesweeper-esque JavaScript game where the user dictates the size of the game
+					and how many lynx they wish to find in a randomly generated forest of snakes.<br><br>
+					I utilised the powers of JavaScript to dynamically render the amount of lives a user would have
+					before starting the game, based on how many lynx they wish to find.<br><br>Used a modal which
+					was set as hidden in CSS by default. It's triggered to display through JS when the game ends
+					with the modal message being set dependent on a win or loss. Also set a default error
+					message on the modal as a preventative measure against bugs, in case there happens to be an issue
+					with setting the win/loss message.
+				</p>
+			</div>
 		</div>
 		<div class="links">
 			<div class="button projectLink liveProjectLink">
@@ -90,44 +97,22 @@
 	</div>
 
 	<div class="projectPlusLinks">
-		<h1>iO Academy Aptitude Test</h1>
-		<div class="project">
-			<div>
-				<img class="projectImage" src="assets/aptitudeScreenshot.png" alt="Question view page from the iO Academy aptitude test" />
-			</div>
-			<p>
-				Rebuilt the Academy aptitude test in React, harnessing JavaScript to dynamically render
-				pages with reusable components.<br><br>Working in 3 teams of 8, communication and sufficient sprint
-				planning was paramount to our success. I optimised the codebase from the start to minimise
-				technical debt. Also fetched correct answers from a RESTful API to compare with user answers
-				that were captured in application state.
-			</p>
-		</div>
-		<div class="links">
-			<div class="button projectLink liveProjectLink">
-				<a href="https://aptitude-test.dev.io-academy.uk/" target="_blank">Live Project</a>
-			</div>
-			<div class="button projectLink">
-				<a href="https://github.com/iO-Academy/aptitude-test-react" target="_blank">Github Project</a>
-			</div>
-		</div>
-	</div>
-
-	<div class="projectPlusLinks">
 		<h1>Muppets Collection</h1>
 		<div class="project">
 			<div>
-				<img class="projectImage" src="assets/muppetScreenshot-min.png" alt="Muppet app index page" />
+				<img class="projectImage" src="assets/muppetScreenshot-min.png" alt="Screenshot of Muppet app index page" />
 			</div>
-			<p>
-				Utilised OOP within PHP, as well as the hydrator design pattern to retrieve muppets and
-				their stats to display on the front-end.<br><br>I worked on multiple tasks across the project such
-				as the 'more details' feature on each muppet which retrieved a single entity from the database
-				to display on a new page. Also worked on error handling for this to make sure users couldn't put
-				an incorrect ID directly into the URL without being sent back with a custom error.<br><br>
-				Made use of mocking in unit tests to decouple dependencies that certain methods had.<br><br>
-				Sanitised and validated user input for partial search queries to the DB.
-			</p>
+			<div class="projectText">
+				<p>
+					Utilised OOP within PHP, as well as the hydrator design pattern to retrieve muppets and
+					their stats to display on the front-end.<br><br>I worked on multiple tasks across the project such
+					as the 'more details' feature on each muppet which retrieved a single entity from the database
+					to display on a new page. Also worked on error handling for this to make sure users couldn't put
+					an incorrect ID directly into the URL without being sent back with a custom error.<br><br>
+					Made use of mocking in unit tests to decouple dependencies that certain methods had.<br><br>
+					Sanitised and validated user input for partial search queries to the DB.
+				</p>
+			</div>
 		</div>
 		<div class="links">
 			<div class="button projectLink liveProjectLink">
@@ -135,6 +120,59 @@
 			</div>
 			<div class="button projectLink">
 				<a href="https://github.com/iO-Academy/2021-aug-oopMuppets" target="_blank">Github Project</a>
+			</div>
+		</div>
+	</div>
+
+	<div class="projectPlusLinks">
+		<h1>iO Academy Portal (Legacy Codebase)</h1>
+		<div class="project">
+			<div>
+				<img class="projectImage" src="assets/ioPortalScreenshotCompressed.png" alt="Screenshot showing the applicant stages view on the iO Academy Portal" />
+			</div>
+			<div class="projectText">
+				<p>
+					Built upon a legacy codebase using OOP & JavaScript with Slim. Followed the MVC design pattern in place
+					and adhered to SOLID principles.<br><br>Found a pattern for a known bug in order to narrow down the
+					cause and fix it. Also went about adding lock functionality to prevent deletion of applicant
+					stages. I edited pre-existing Bootstrap classes for this page to incorporate lock icons and
+					neaten the layout.<br><br>jQuery was prominent, so I had to learn more jQuery on the fly to fit with
+					existing code. Was also introduced to Continuous Integration checks when pushing to GitHub.
+				</p>
+			</div>
+		</div>
+		<div class="links">
+			<div class="button projectLink liveProjectLink">
+				<a href="https://portal.dev.io-academy.uk/" target="_blank">Live Project</a>
+			</div>
+			<div class="button projectLink">
+				<a href="https://github.com/iO-Academy/AcademyPortal" target="_blank">Github Project</a>
+			</div>
+		</div>
+	</div>
+
+	<div class="projectPlusLinks bottomProject">
+		<h1>iO Academy Aptitude Test</h1>
+		<div class="project">
+			<div>
+				<img class="projectImage" src="assets/aptitudeScreenshot.png" alt="Screenshot showing question view page from the iO Academy aptitude test" />
+			</div>
+			<div class="projectText">
+				<p>
+					Rebuilt the Academy aptitude test in React, harnessing JavaScript to dynamically render
+					pages with reusable components.<br><br>Working in 3 teams of 8, communication and sufficient sprint
+					planning was paramount to our success. I optimised the codebase from the start to minimise
+					technical debt. Also fetched correct answers from a RESTful API to compare with user answers
+					that were captured in application state.
+				</p>
+			</div>
+		</div>
+		<div class="links">
+			<div class="button projectLink liveProjectLink">
+				<a href="https://aptitude-test.dev.io-academy.uk/" target="_blank">Live Project</a>
+			</div>
+			<div class="button projectLink">
+				<a href="https://github.com/iO-Academy/aptitude-test-react" target="_blank">Github Project</a>
 			</div>
 		</div>
 	</div>

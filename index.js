@@ -13,10 +13,12 @@ emailBtn.addEventListener('click', () => {
 buttons.forEach((button) => {
     button.addEventListener('click', (e) => {
         let url = e.target.firstElementChild.href
-        if (e.target.classList.contains('projectLink')) {
-            window.open(url);
-        } else {
-            window.open(url, '_self');
+        if (!e.target.classList.contains('inactiveLink')) {
+            if (e.target.classList.contains('projectLink')) {
+                window.open(url);
+            } else {
+                window.open(url, '_self');
+            }
         }
     })
 })
