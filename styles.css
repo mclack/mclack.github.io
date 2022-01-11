@@ -24,12 +24,12 @@ nav {
     border: 2px solid #05668D;
     margin: 4px 0;
     text-align: center;
-    text-decoration: underline;
+    text-decoration: none;
     cursor: pointer;
     color: #000000;
     background-color: #F1FFFE;
     border-radius: 10px;
-    font-family: Copperplate;
+    font-family: 'Oswald', sans-serif;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -43,6 +43,7 @@ nav {
 
 a {
     color: #000000;
+    text-decoration: none;
 }
 
 .inactiveLink {
@@ -65,26 +66,22 @@ a {
     text-align: center;
     padding: 5px 0;
     border-radius: 6px;
-    /* Position the tooltip text - see examples below! */
     position: absolute;
     z-index: 1;
 }
 
 /* GENERAL TEXT STYLISATION */
-h1, h2 {
-    font-family: Monaco;
-}
 
 h1 {
     text-decoration: underline;
 }
-
-p {
-    font-family: Monaco;
-}
-
 h1, h2, p {
     color: #000000;
+    font-family: 'Merriweather', serif;
+}
+p {
+    font-family: 'Rubik', sans-serif;
+    font-size: 18px;
 }
 
 /* INTRODUCTION SECTION */
@@ -111,7 +108,7 @@ h1, h2, p {
         width: 0;
     }
     to {
-        width: 180px;
+        width: 140px;
     }
 }
 /* TYPEWRITER CURSOR EFFECT */
@@ -231,12 +228,12 @@ summary p {
     height: 32px;
     width: 32px;
     border-radius: 5px;
-    padding: 7px 0 0 9px;
+    padding: 8px 0 0 9px;
 }
 
 .socialLink:hover {
     border: 2px solid #ED2116;
-    padding: 5px 0 0 7px;
+    padding: 6px 0 0 7px;
     background-color: #21ACF6;
 }
 
