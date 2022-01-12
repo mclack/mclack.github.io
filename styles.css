@@ -148,8 +148,7 @@ p {
 
 .links {
     display: flex;
-    margin-top: 40px;
-    margin-right: 100px;
+    margin: 40px 100px 0 16px;
 }
 
 .project {
